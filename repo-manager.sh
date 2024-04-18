@@ -34,5 +34,5 @@ check_and_pull() {
 # Continuously monitor for changes
 while true; do
   check_and_pull
-  sleep 5  # Check every 5 sec
+  sleep 300 # Check every 5 minutes 
 done
