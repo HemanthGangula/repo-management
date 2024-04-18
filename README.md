@@ -24,6 +24,29 @@ Additionally, make sure that the Docker engine is running on your system before 
    ```bash
    docker run -e GIT_REPO_URL=<repository-url> repo-manager
 
+## Getting the Local Repository in the Docker Container
+
+To access the local repository within the Docker container, follow these steps:
+
+1. **Run the Docker Container in Detached Mode**: Start the Docker container in detached mode `-d` with the following command, replacing `<repository-url>` with the URL of the Git repository you want to monitor:
+   ```bash
+   docker run -d -e GIT_REPO_URL=<repository-url> repo-manager
+   
+2. **Access the Docker Terminal**: Once the container is running, access the Docker terminal using the docker exec command. Replace <container-id> with the ID or name of the running container:
+   ```bash
+   docker exec -it <container-id> /bin/bash
+
+3. **Navigate to the Local Repository**: Inside the Docker container, change the directory to the local repository. By default, it is located at `/app/repository`:
+   ```bash
+   cd repository
+
+4. **View Repository Files**: Use the ls command to view the files present in the local repository:
+   ```bash
+   ls
+
+You will see the files that are present in the local repository, which are synchronized with the remote repository specified by `<repository-url>`.
+
+
 
 # Functionality of the Script
 
