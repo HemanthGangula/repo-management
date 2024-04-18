@@ -10,6 +10,36 @@ Additionally, make sure that the Docker engine is running on your system before 
 
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/HemanthGangula/repo-management.git
+   
+2. **Navigate to the Repository Directory**: Change the directory to the cloned repository:
+   ```bash
+   cd repo-management
+
+3. **Build the Docker Image**: Build the Docker image using the provided Dockerfile. Run the following command:
+   ```bash
+   docker build -t repo-manager .
+
+4. **Run the Docker Container**: Run the Docker container with the following command, replacing <repository-url> with the URL of the Git repository you want to monitor:
+   ```bash
+   docker run -e GIT_REPO_URL=<repository-url> repo-manager
+
+
+# Functionality of the Script
+
+
+The **'repo-manager.sh'** script automates the process of cloning a Git repository, monitoring for changes, and pulling updates into the local repository within the Docker container. It performs the following tasks:
+
+- Clones the specified Git repository into the Docker container.
+- Monitors the repository for new changes at regular intervals.
+- Pulls any new updates from the remote repository into the local copy within the Docker container.
+- Provides error handling for cloning and pulling operations.
+
+
+# Environment Variables
+
+`GIT_REPO_URL`: Specifies the URL of the Git repository to monitor. This environment variable is passed to the Docker container when running the container.
+   
+
 
 
