@@ -1,4 +1,11 @@
 # repo-management
+Automate your Git repository management process using Docker. This repository contains a shell script (`repo-manager.sh`) and a Dockerfile to create a Docker container capable of cloning a Git repository, monitoring for changes, and pulling updates automatically. 
+
+## Introduction
+
+This project simplifies DevOps workflows by automating the management of Git repositories. With Docker, you can easily deploy the script to any environment and ensure consistent repository management.
+
+![Basic Architecture Diagram](https://github.com/HemanthGangula/repo-management/blob/main/repo-management%20basic%20architecture.png)
 
 ## Prerequisites
 
