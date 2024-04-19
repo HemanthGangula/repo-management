@@ -58,8 +58,21 @@ The **'repo-manager.sh'** script automates the process of cloning a Git reposito
 - Pulls any new updates from the remote repository into the local copy within the Docker container.
 - Provides error handling for cloning and pulling operations.
 
+## Note:
 
-# Environment Variables
+The present code detects updates in the main branch due to the line in the `repo-manager.sh`:
+```bash
+CHANGES=$(git rev-list HEAD..origin/main --count)
+```
+
+
+If you have any specific branch, please make changes in the `repo-manager.sh` file. For example, if you have a master branch, simply change `main` to `master` as follows:
+```bash
+CHANGES=$(git rev-list HEAD..origin/master --count)
+```
+   
+
+## Environment Variables :
 
 `GIT_REPO_URL`: Specifies the URL of the Git repository to monitor. This environment variable is passed to the Docker container when running the container.
    
