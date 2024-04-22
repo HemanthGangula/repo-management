@@ -1,4 +1,4 @@
-# Use Ubuntu as the base image
+# Use Ubuntu as the base image 
 FROM ubuntu:latest
 
 # Update package lists and install Git
