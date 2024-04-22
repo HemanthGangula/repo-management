@@ -23,9 +23,17 @@ Additionally, make sure that the Docker engine is running on your system before 
    ```bash
    cd repo-management
 
-3. **Build the Docker Image**: Build the Docker image using the provided Dockerfile. Run the following command:
+3. Building the Docker Image: Utilize the provided Dockerfile to construct the Docker image. Execute the subsequent command:
    ```bash
    docker build -t repo-manager .
+   ```
+   
+   Alternatively, you can opt to directly pull the image from [Docker Hub](https://hub.docker.com/r/hemanthgangula/repo-manager):
+      ```bash
+      docker pull hemanthgangula/repo-manager
+      ```
+ you can directly pull the image from the docker hub
+ docker pull hemanthgangula/repo-manager
 
 4. **Run the Docker Container**: Run the Docker container with the following command, replacing <repository-url> with the URL of the Git repository you want to monitor:
    ```bash
